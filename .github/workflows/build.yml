@@ -82,13 +82,13 @@ jobs:
           r="${r//$'\r'/'%0D'}"
           echo "RELEASE_BODY=$r" >> $GITHUB_OUTPUT
 
-      - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
+      - name: Create Release
+        uses: ncipollo/release-action@v1
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: iosevka/dist/Bersevka/Bersevka.zip
-          asset_name: Bersevka.zip
-          tag: ${{ github.ref }}
-          overwrite: true
-          body: |
-            ${{ steps.read_release.outputs.RELEASE_BODY }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          artifacts: iosevka/dist/Bersevka/Bersevka.zip
+          artifactContentType: application/zip
+          body: ${{ steps.read_release.outputs.RELEASE_BODY }}
+          allowUpdates: true
