@@ -37,8 +37,8 @@ jobs:
       - name: Install ttfautohint
         run: sudo apt-get update && sudo apt-get install -y ttfautohint
 
-      - name: Generate private build plan
-        run: sh ./generate_plan.sh
+      # - name: Generate private build plan
+      #   run: sh ./generate_plan.sh
 
       - name: Copy build plan
         run: cp private-build-plans.toml iosevka/
