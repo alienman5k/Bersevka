@@ -7,6 +7,7 @@ noCvSs = true
 exportGlyphNames = false
 
 [buildPlans.Bersevka.variants.design]
+one = "no-base-long-top-serif"
 three = "flat-top-serifless"
 five = "upright-flat-hook-serifless"
 six = "open-contour"
