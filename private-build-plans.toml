@@ -8,8 +8,11 @@ exportGlyphNames = false
 
 [buildPlans.Bersevka.variants.design]
 three = "flat-top-serifless"
-five = "upright-arched-serifless"
+five = "upright-flat-hook-serifless"
+six = "open-contour"
 seven = "straight-serifless-crossbar"
+eight = "two-circles"
+nine = "open-contour"
 zero = "dotted"
 capital-a = "straight-serifless"
 capital-g = "toothless-corner-serifless-hooked"
@@ -60,15 +63,25 @@ shape = 700
 menu = 700
 css = 700
 
-[buildPlans.Bersevka.widths.Condensed]
+[buildPlans.Bersevka.weights.Medium]
 shape = 500
-menu = 3
-css = "condensed"
+menu = 500
+css = 500
 
 [buildPlans.Bersevka.widths.Normal]
-shape = 600
+shape = 500
 menu = 5
 css = "normal"
+
+[buildPlans.Bersevka.widths.Extended]
+shape = 600
+menu = 7
+css = "expanded"
+
+[buildPlans.Bersevka.widths.SemiExtended]
+shape = 548
+menu = 6
+css = "semi-expanded"
 
 [buildPlans.Bersevka.slopes.Upright]
 angle = 0
